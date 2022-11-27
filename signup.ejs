@@ -16,6 +16,7 @@
 h1 {
   text-align: center;
   padding-top: 15px;
+  margin-bottom: 0px;
 }
 
 h4 {
@@ -41,7 +42,7 @@ form input {
   border-radius: 6px;
   outline: none;
 }
-input[type="button"] {
+input[type="submit"] {
   width: 300px;
   height: 35px;
   margin-top: 20px;
@@ -75,21 +76,22 @@ p {
     />
   </head>
   <body>
-    <h1 align="center" style="color: bisque;">ECAP BVRIT ENGINEERING FOR WOEMNS HYDERABAD</h1>
+    <h1 align="center" style="color: bisque;">BVRIT HYDERABAD </h1>
+    <h2 align="center" style="color: bisque;">College of Engineering For Women</h2>
     <div class="signup-box">
       <h1>Register</h1>
-      <form>
+      <form action="/signupsubmit" method="get">
         <label>Full Name</label>
-        <input type="text" placeholder="" />
+        <input type="text" name ="FullName"placeholder="" />
         <label>Roll Number</label>
-        <input type="text" placeholder="" />
+        <input type="text" name="RollNumber" placeholder="" />
         <label>Email</label>
-        <input type="email" placeholder="" />
+        <input type="email" name="Email" placeholder="" />
         <label>Password</label>
-        <input type="password" placeholder="" />
+        <input type="password" name="Password" placeholder="" />
         <label>Confirm Password</label>
-        <input type="password" placeholder="" />
-        <input type="button" value="Submit" />
+        <input type="password" name="ConfirmPassword" placeholder="" />
+        <input type="submit" value="Submit"/>
       <closeform></closeform></form>
     </div>
     <p class="para-2">
@@ -97,6 +99,3 @@ p {
     </p>
   </body>
 </html>
-
-
-
