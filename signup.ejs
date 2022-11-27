@@ -11,7 +11,17 @@
   background-color: white;
   border-radius: 3px;
 }
+.content img{
+      position: absolute;
+      top: 7px;
+      left: 7px;
+  }
 
+.a{
+  background-color: bisque;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
 
 h1 {
   text-align: center;
@@ -51,6 +61,9 @@ input[type="submit"] {
   color: white;
   font-size: 18px;
 }
+.submit:active {
+  background-color: #00008b;
+}
 p {
   text-align: center;
   padding-top: 20px;
@@ -76,8 +89,10 @@ p {
     />
   </head>
   <body>
-    <h1 align="center" style="color: bisque;">BVRIT HYDERABAD </h1>
-    <h2 align="center" style="color: bisque;">College of Engineering For Women</h2>
+    <div class="content">
+      <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxs-8q1ugbqzOBX4ip7z_6SXZ0YL10JjMThuYZshQfg&s" height="90px" width="140px">
+  </div>
+    <h1 align="center" style="color: #344a72" class="a">BVRIT HYDERABAD College of Engineering For Women</h1>
     <div class="signup-box">
       <h1>Register</h1>
       <form action="/signupsubmit" method="get">
@@ -91,7 +106,7 @@ p {
         <input type="password" name="Password" placeholder="" />
         <label>Confirm Password</label>
         <input type="password" name="ConfirmPassword" placeholder="" />
-        <input type="submit" value="Submit"/>
+        <input type="submit" class="submit" value="Submit"/>
       <closeform></closeform></form>
     </div>
     <p class="para-2">
