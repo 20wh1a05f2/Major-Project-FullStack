@@ -41,7 +41,7 @@ app.get('/signupsubmit',(req, res)=>{
       Confirm: Confirm,
     })
     .then(()=>{
-        res.render("signin", {msg: "Registered Succesfully. "});
+        res.render("success", {msg: "Registered Succesfully. "});
     });
   }
   else{
