@@ -26,6 +26,7 @@ app.get('/signin', (req, res) => {
   res.render('signin');
 })
 
+
 app.get('/signupsubmit',(req, res)=>{
   const FullName = req.query.FullName;
   const RollNumber = req.query.RollNumber;
@@ -48,51 +49,6 @@ app.get('/signupsubmit',(req, res)=>{
     res.send("Registration Failed");
   }
 });
-
-app.get('/feedbacksubmit',(req, res)=>{
-  const Email = req.query.Email;
-  const Password = req.query.Password;
-  var usersData = {};
-  var flag = false;
-  db.collection("users")
-    .where("Email", "==", Email)
-    .where("Password", "==", Password)
-    .get()
-    .then((docs)=>{
-      docs.forEach((doc)=>{
-        const sem1 = req.query.sem1;
-        const sem1lab = req.query.sem1lab;
-        const sem2 = req.query.sem2;
-        const sem2lab = req.query.sem2lab;
-        const sem3 = req.query.sem3;
-        const sem3lab = req.query.sem3lab;
-        const sem4 = req.query.sem4;
-        const sem4lab = req.query.sem4lab;
-        const sem5 = req.query.sem5;
-        const sem5lab = req.query.sem5lab;
-        const sem6 = req.query.sem6;
-        const sem6lab = req.query.sem6lab;
-        const sem7 = req.query.sem7;
-        const sem7lab = req.query.sem7lab;
-        const sem8 = req.query.sem8;
-        const sem8lab = req.query.sem8lab;
-        db.collection("feedback").add({
-          sem1: sem1,
-          sem2: sem2,
-          sem3: sem3,
-          sem4: sem4,
-          sem5: sem5,
-          sem6: sem6,
-          sem7: sem7,
-          sem8: sem8,
-        })
-        .then(()=>{
-            res.send("Feedback successfully submitted");
-        });
-    });
-    });
-  });
-
 
 app.get('/signinsubmit',(req, res)=>{
   const Email = req.query.Email;
@@ -117,7 +73,9 @@ app.get('/signinsubmit',(req, res)=>{
     });
 });
 
-
+app.get('/feedbacksubmit',(req,res)=>{
+  res.render("feedback");
+})
 app.get('/coursesubmit', (req, res) => {
       res.render("courseMaterial");
 });
@@ -139,6 +97,10 @@ app.get('/biosubmit',function(req,res){
     });
     res.render("biodata",{data:usersData});
   })
+});
+
+app.get('/complaintsubmit', (req, res) => {
+  res.render("complaints");
 });
 
 app.get("/logoutsubmit", (req,res) => {

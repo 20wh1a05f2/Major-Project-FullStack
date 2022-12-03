@@ -105,7 +105,7 @@ nav{
       <input type = "submit" class = "btn" value = "LOGOUT" style="color: white;">
     </div>
   </form>
-  <h4 style="color: rgb(67, 70, 74);">&nbsp;&nbsp; Welcome <%= data.Name%> </h4>
+  <h4 style="color: rgb(50, 78, 114);">&nbsp;&nbsp; Welcome <%= data.Name%> </h4>
   
   <div class="container">
     <nav>
@@ -135,11 +135,18 @@ nav{
           <input type = "submit" value ="Time Table" >
         </form>
 
-        <form action = "/feedbacksubmit" method = 'GET'>
+        <form action = "feedbacksubmit" method = 'GET'>
           <input type = "text" name = "email" value = <%= data.Email%> hidden readonly>
           <input type = "text" name = "pwd" value = <%= data.Password%> hidden readonly>
           <input type = "submit" value ="Feedback" >
         </form>
+
+        <form action = "/complaintsubmit" method = 'GET'>
+          <input type = "text" name = "email" value = <%= data.Email%> hidden readonly>
+          <input type = "text" name = "pwd" value = <%= data.Password%> hidden readonly>
+          <input type = "submit" value ="Complaints" >
+        </form>
+
       </div>
     </nav>
 
