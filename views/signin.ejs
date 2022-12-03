@@ -1,0 +1,117 @@
+<style>
+    body {
+    background-color: #344a72;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .login-box {
+    width: 360px;
+    height: 290px;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 3px;
+    line-height: 1.75em;
+    background-color: white;
+  }
+  
+  .content img{
+      position: absolute;
+      top: 7px;
+      left: 7px;
+  }
+
+  .a{
+  background-color: bisque;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+  h1 {
+    text-align: center;
+    padding-top: 25px;
+  }
+  
+  h2{
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  form input {
+    width: 105%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="submit"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 18px;
+  }
+  .submit:active {
+  background-color: #00008b;
+}
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .para-2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .para-2 a {
+    color: #49c1a2;
+  }
+  .para-2 a :active{
+    color: #061410;
+  }
+
+  </style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login | ECAP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxs-8q1ugbqzOBX4ip7z_6SXZ0YL10JjMThuYZshQfg&s" height="90px" width="140px">
+  </div>
+    <h1 align="center" style="color: #344a72" class="a">BVRIT HYDERABAD College of Engineering For Women</h1>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form action="/signinsubmit" method="get">
+        <label>Email</label>
+        <input type="email" name ="Email" placeholder="" />
+        <label>Password</label>
+        <input type="password" name="Password" placeholder="" />
+        <input type="submit" class = "submit" value="Submit" />
+      <closeform></closeform></form>
+    </div>
+    <p class="para-2">
+      Not registered yet? <a href="signup">Register Here</a>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>FEEDBACK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        /*------------online courses----------*/
+
+        .feedback-top {
+            padding: 0 0 100px 0;
+        }
+
+        .online-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px;
+            color: rgb(26, 5, 5);
+            background-color: rgb(156, 157, 162);
+        }
+
+        .online-feedback {
+            background-color: white;
+            height: auto;
+            padding: 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .online-feedback img {
+
+            border-radius: 8px;
+            margin-bottom: 15px;
+            width: 200px;
+            height: 150px;
+        }
+
+        .online-box {
+            background-color: rgb(157, 161, 168);
+            padding: 20px 40px;
+            display:grid;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: space-between;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgb(177, 177, 177), 2px 2px 5px rgb(177, 177, 177);
+            transition: 0.3s ease-in-out;
+        }
+
+        .online-box:hover {
+            box-shadow: 0px 5px 15px #bdbdbd;
+            cursor: pointer;
+        }
+
+        .online-box h2 {
+            font-size: 18px;
+            color: rgb(49 48, 48);
+            margin: 5px 0;
+        }
+
+        .online-box p {
+            color: rgb(99, 99, 99);
+            margin: 5px 0;
+
+        }
+
+        input[type="submit"] {
+            width: 150px;
+            height: 35px;
+            margin-top: 20px;
+            margin-left: 550px;
+            border: none;
+            border-radius: 10px;
+            background-color: #384352;
+            color: white;
+            font-size: 18px;
+        }
+        .submit:active {
+            background-color: #5151b0;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        .content img{
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            margin-top: 5px;
+        }
+
+        .a{
+            background-color: #344a72;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxs-8q1ugbqzOBX4ip7z_6SXZ0YL10JjMThuYZshQfg&s" height="90px" width="140px">
+    </div>
+      <h1 align="center" style="color: aliceblue" class="a">BVRIT HYDERABAD College of Engineering For Women</h1>
+
+        <!--online courses-->
+        <div class="feedback-top" id="feedback">
+            <div class="online-title">
+                <h2>Feedback</h2>
+            </div>
+            <h2 align="center" style="color: black;">INSTRUCTIONS<br>
+                Excellent- 4&nbsp;&nbsp; Good- 3&nbsp;&nbsp; Average- 2&nbsp;&nbsp; Poor- 1
+            </h2><br>
+            <form action="/feedbacksubmit">
+            <section class="online-feedback">
+                <div class="online-box">
+                    <h2>Sem I</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem1" name="sem1" min="1" max="4">
+                    <label>Labs</label><input type="number" id="sem1" name="sem1Lab" min="1" max="4"> 
+                </div>
+
+                <div class="online-box">
+                    <h2>Sem II</h2>
+                    <p >CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem2" name="sem2" min="1" max="4"> 
+                    <label>Labs</label><input type="number" id="sem2" name="sem2Lab" min="1" max="4"> 
+                </div>
+
+                <div class="online-box">
+                    <h2>Sem III</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem3" name="sem3" min="1" max="4">
+                    <label>Labs</label><input type="number" id="sem3" name="sem3Lab" min="1" max="4"> 
+                </div>
+                
+                <div class="online-box">
+                    <h2>Sem IV</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem4" name="sem4" min="1" max="4"> 
+                    <label>Labs</label><input type="number" id="sem4" name="sem4Lab" min="1" max="4">
+                </div>
+            </section>
+            <br><br>
+            <section class="online-feedback">
+
+                <div class="online-box">
+                   
+                    <h2>Sem V</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem5" name="sem5" min="1" max="4">
+                    <label>Labs</label><input type="number" id="sem5" name="sem5Lab" min="1" max="4"> 
+                </div>
+
+                <div class="online-box">
+                    
+                    <h2>Sem VI</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem6" name="sem6" min="1" max="4">
+                    <label>Labs</label><input type="number" id="sem6" name="sem6Lab" min="1" max="4">
+
+
+                </div>
+
+                <div class="online-box">
+                    
+                    <h2>Sem VII</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem7" name="sem7" min="1" max="4">
+                    <label>Labs</label><input type="number" id="sem7" name="sem7Lab" min="1" max="4">
+
+                </div>
+
+                <div class="online-box">
+                    <h2>Sem VIII</h2>
+                    <p>CSE</p>&nbsp;
+                    <label>Classes</label><input type="number" id="sem8" name="sem8" min="1" max="4">
+                    <label>Labs</label><input type="number" id="sem8" name="sem8Lab" min="1" max="4"> 
+                </div>
+            </section>
+            <br><br>
+            <input type="submit" class = "submit" value="Submit" align="center" />
+        </form>
+
+        </div>
+    </a>
+</body>
+
+</html>
