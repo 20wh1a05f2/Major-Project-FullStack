@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    * {
+        font-family: sans-serif;
+      }
+      table.content-table{
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .content-table {
+          margin: 25px 0;
+          font-size: 0.9em;
+          min-width: 400px;
+          border-radius: 5px 5px 0 0;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .content-table thead tr {
+          background-color: #009879;
+          color: #ffffff;
+          text-align: left;
+          font-weight: bold;
+      }
+
+      .content-table th,
+      .content-table td {
+          padding: 12px 15px;
+      }
+
+      .content-table tbody tr {
+          border-bottom: 1px solid #fcf9f9;
+      }
+
+      .content-table tbody tr:nth-of-type(even) {
+          background-color: #f8f4f4;
+      }
+
+      .content-table tbody tr.active-row {
+          font-weight: bold;
+          color: #23225a;
+      }
+      .content img {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        margin-top: 5px;
+      }
+      .a{
+            background-color: #102854;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT PROFILE</title>
+</head>
+<div class="content">
+  <h1 align="center" style="color: #c9d9f5" class="a">&nbsp; BVRIT HYDERABAD College of Engineering For Women</h1>
+  <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxs-8q1ugbqzOBX4ip7z_6SXZ0YL10JjMThuYZshQfg&s" height="85px" width="140px">
+</div>
+<form action="/profilesubmit" method="get">
+<body style="background-color: rgb(194, 219, 250);">
+<h2 align="center" style="color: rgb(32, 56, 99);"> STUDENT BIO CARD</h2>
+<table class="content-table">
+       
+  <tbody >
+    <tr class="active-row">
+      <td> NAME:</td>
+      <td><%= data.Name%></td>
+    </tr>
+    <tr class="active-row">
+      <td>ROLL NUMBER:</td>
+      <td><%= data.RollNumber%></td> 
+    </tr>
+    <tr class="active-row">
+      <td>FATHER'S NAME:</td>
+      <td><%= data.FatherName%></td>
+    </tr>
+    <tr class="active-row">
+      <td>MOTHER'S NAME:</td>
+      <td><%= data.MotherName%></td>
+    </tr>
+    <tr class="active-row">
+      <td>EMAIL ID:</td>
+      <td><%= data.Email%></td> 
+    </tr>
+    <tr class="active-row">
+      <td>DOB:</td>
+      <td><%= data.DOB%></td>
+    </tr>
+    <tr class="active-row">
+      <td>DEPARTMENT:</td>
+      <td>.</td>
+    </tr>
+    <tr class="active-row">
+      <td>GENDER:</td>
+      <td><%= data.Gender%></td>
+    </tr>
+    <tr class="active-row">
+      <td>ADDRESS:</td>
+      <td><%= data.Address%></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</form>
+</html>

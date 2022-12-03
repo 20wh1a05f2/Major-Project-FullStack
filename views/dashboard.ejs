@@ -117,6 +117,12 @@ nav{
           <input type = "submit" value ="Bio Data" >
         </form>
 
+        <form action = "/profilesubmit" method = 'GET'>
+          <input type = "text" name = "email" value = <%= data.Email%> hidden readonly>
+          <input type = "text" name = "pwd" value = <%= data.Password%> hidden readonly>
+          <input type = "submit" value ="View Profile" >
+        </form>
+
         <form action = "/aboutsubmit" method = 'GET'>
           <input type = "text" name = "email" value = <%= data.Email%> hidden readonly>
           <input type = "text" name = "pwd" value = <%= data.Password%> hidden readonly>

@@ -19,6 +19,8 @@ app.get('/', (req, res) => {
   res.render('main.ejs');
 })
 
+var E = 'a';
+var P = 'a';
 app.get('/signup', (req, res) => {
   res.render('signup');
 })
@@ -40,6 +42,22 @@ app.get('/signupsubmit',(req, res)=>{
       Email: Email,
       Password: Password,
       Confirm: Confirm,
+          sem1: '',
+          sem1lab : '',
+          sem2: '',
+          sem2lab: '',
+          sem3: '',
+          sem3lab: '',
+          sem4: '',
+          sem4lab:'',
+          sem5: '',
+          sem5lab: '',
+          sem6: '',
+          sem6lab: '',
+          sem7: '',
+          sem7lab: '',
+          sem8: '',
+          sem8lab: '',
     })
     .then(()=>{
         res.render("success", {msg: "Registered Succesfully. "});
@@ -51,13 +69,13 @@ app.get('/signupsubmit',(req, res)=>{
 });
 
 app.get('/signinsubmit',(req, res)=>{
-  const Email = req.query.Email;
-  const Password = req.query.Password;
+    E = req.query.Email;
+    P = req.query.Password;
   var usersData = {};
   var flag = false;
   db.collection("users")
-    .where("Email", "==", Email)
-    .where("Password", "==", Password)
+    .where("Email", "==", E)
+    .where("Password", "==", P)
     .get()
     .then((docs)=>{
       docs.forEach((doc)=>{
@@ -74,8 +92,59 @@ app.get('/signinsubmit',(req, res)=>{
 });
 
 app.get('/feedbacksubmit',(req,res)=>{
-  res.render("feedback");
+  res.render("feedback",{});
 })
+app.get('/feedbacksubmit1',(req, res)=>{
+  console.log("ok")
+  var usersData = {};
+  db.collection("users").where("Email", "==", E).where("Password", "==", P).get().then((docs)=>{
+      console.log(E)
+      console.log(P)
+      docs.forEach((doc)=>{
+        console.log("ok")
+        db.collection("users").doc(doc.id).update({
+
+          sem1:req.query.sem1 ,
+          sem1lab : req.query.sem1Lab,
+          sem2: req.query.sem2,
+          sem2lab: req.query.sem2Lab,
+          sem3: req.query.sem3,
+          sem3lab: req.query.sem3Lab,
+          sem4: req.query.sem4,
+          sem4lab:req.query.sem4Lab,
+          sem5: req.query.sem5,
+          sem5lab: req.query.sem5Lab,
+          sem6: req.query.sem6,
+          sem6lab: req.query.sem6Lab,
+          sem7:req.query.sem7,
+          sem7lab: req.query.sem7Lab,
+          sem8: req.query.sem8,
+          sem8lab: req.query.sem8Lab
+        });
+            res.send("Feedback successfully submitted");
+    });
+  });
+});
+app.get('/biosubmit1',(req,res)=>{
+  var usersData = {};
+  db.collection('users').where("Email", '==' , E).where("Password",'==', P).get().then((docs)=>{
+    console.log(E)
+    console.log(P)
+      docs.forEach((doc)=>{
+      db.collection("users").doc(doc.id).update({
+        FatherName : req.query.fname,
+        MotherName : req.query.mname,
+        DOB : req.query.dob,
+        Address : req.query.address,
+        Pincode : req.query.pincode,
+    });
+    res.send("Data updated successfully");
+  })
+});
+});
+
+
+
 app.get('/coursesubmit', (req, res) => {
       res.render("courseMaterial");
 });
@@ -99,8 +168,33 @@ app.get('/biosubmit',function(req,res){
   })
 });
 
+app.get('/profilesubmit',function(req,res){
+  var usersData = {};
+  db.collection('users')
+    .where("Email", '==' , E)
+    .where("Password",'==',P)
+    .get()
+    .then((docs)=>{
+      docs.forEach((doc)=>{
+      usersData = doc.data();
+    });
+    res.render("profile",{data:usersData});
+  })
+});
+
+
 app.get('/complaintsubmit', (req, res) => {
   res.render("complaints");
+});
+
+app.get('/complaintsubmit1', (req, res) => {
+  db.collection('complaints').add({
+    type : req.query.type,
+    complaint: req.query.x,
+  })
+  .then(()=>{
+    res.send("Complaint sent successfully");
+});
 });
 
 app.get("/logoutsubmit", (req,res) => {

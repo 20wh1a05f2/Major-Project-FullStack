@@ -1,39 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    .content{
-    position: relative;
-    height: 20%;
-    width: 100%;
-    margin-top: 2px;
-    border-radius: 10px;
-    padding: 0.5rem 0.2rem 2rem 0.5rem;
-    background: rgb(0, 36, 85);
-}
+  <style>
+
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
     
-.content img {
+    html,
+    body {
+      background-color: #8aa6b0;
+      text-align: center;
+      font-family: 'Raleway', Helvetica, sans-serif;
+      min-width: 320px;
+    }
+    
+    header {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 20px;
+    }
+    
+    #form-outer {
+      background-color: rgb(93, 120, 196);
+      color: rgb(211, 230, 232);
+      margin: 0 auto;
+      border-radius: 4px;
+      width: 75%;
+      max-width: 900px;
+      padding: 10px;
+      padding-top: 20px;
+    }
+    
+    .labels {
+      display: inline-block;
+      text-align: right;
+      width: 40%;
+      padding: 5px;
+      vertical-align: top;
+      margin-top: 10px;
+    }
+    
+    .rightTab {
+      display: inline-block;
+      text-align: left;
+      width: 48%;
+      vertical-align: middle;
+    }
+    
+    .input-field {
+      height: 20px;
+      width: 280px;
+      padding: 5px;
+      margin: 10px;
+      border: 1px solid #c0c0c0;
+      border-radius: 2px;
+    }
+
+    .field {
+      height: 20px;
+      width: 280px;
+      padding: 5px 50px 5px 5px; 
+      margin: 10px;
+      border: 1px solid #0f0c0c;
+      background-color: white;
+      color: black;
+      border-radius: 2px;
+    }
+    
+    #submit {
+      background-color: #1a8cff;
+      border-radius: 4px;
+      color: white;
+      font-size: 1em;
+      height: 40px;
+      width: 96px;
+      margin: 10px;
+      border: 0px solid;
+    }
+    
+    #reset {
+      background-color: #1a8cff;
+      border-radius: 4px;
+      color: white;
+      font-size: 1em;
+      height: 40px;
+      width: 96px;
+      margin: 10px;
+      border: 0px solid;
+    }
+    .dropdown {
+      height: 35px;
+      width: 140px;
+      padding: 5px;
+      margin: 10px;  
+      margin-top: 15px;
+      border: 1px solid #c0c0c0;
+      border-radius: 2px;
+    }
+    
+    .radio, .checkbox {
+      position: relative;
+      left: -43px;
+      margin-left: 10px;
+      display: block;
+      padding-bottom: 10px;
+    }
+    
+    @media screen and (max-width: 833px) {
+      .input-field {
+        width: 80%;
+      }
+      select {
+        width: 90%;
+      }
+    }
+    
+    @media screen and (max-width: 520px) {
+      .labels {
+        width: 100%;
+        text-align: left;
+      }
+      .rightTab {
+        width: 80%;
+        float: left;
+      }
+      .input-field {
+        width: 100%;
+      }
+      select {
+        width: 100%;
+      }
+      }
+      .content img {
         position: absolute;
-        top: 0px;
-        left: 0px;
-}
-</style>
+        top: 7px;
+        left: 7px;
+        margin-top: 5px;
+      }
+      .a{
+            background-color: #102854;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+      </style>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BVRITH | ECAP</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIO | ECAP</title>
 </head>
-<body >
-    <div class="content">
-        <h1 align="center" style="color: #c9d9f5" class="a">&nbsp; BVRIT HYDERABAD College of Engineering For Women</h1>
-        <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxs-8q1ugbqzOBX4ip7z_6SXZ0YL10JjMThuYZshQfg&s" height="150px" width="140px">
+<body>
+
+  <div class="content">
+    <h1 align="center" style="color: #c9d9f5" class="a">&nbsp; BVRIT HYDERABAD College of Engineering For Women</h1>
+    <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxs-8q1ugbqzOBX4ip7z_6SXZ0YL10JjMThuYZshQfg&s" height="85px" width="140px">
+  </div>
+<h1 id="title">Student Bio Data</h1>
+<div id="form-outer">
+  <div class="rowTab">
+    <div class="labels">
+      <label id="name-label" for="name">Name: </label>
     </div>
-    <div>
-        <br><br>
-        <h4>Name: <%= data.Name%></h4>
-        <h4>RollNumber: <%= data.RollNumber%></h4>
-        <h4>Mail Id: <%= data.Email%></h4>
+    <div class="rightTab"><br>
+      <label class="field"><%= data.Name%></label>
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label id="email-label" for="email">Email: </label>
+    </div>
+    <div class="rightTab"><br>
+      <label class="field"><%= data.Email%></label>
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label id="number-label" for="ROLL NUMBER">ROLL NUMBER: </label>
+    </div>
+    <div class="rightTab"><br>
+      <label class="field"><%= data.RollNumber%></label>
+    </div>
+  </div>
+
+  <form id="survey-form" method="GET" action="/biosubmit1">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="fname-label" for ="fname">Father's Name: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="fname" id="fname" class="input-field" placeholder="Enter your father's name" required>
+      </div>
     </div>
     
+    <div class="rowTab">
+      <div class="labels">
+        <label id="mname-label" for="mname">Mother's Name: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="mname" id="mname" class="input-field" placeholder="Enter your mother's name" required>
+      </div>
+    </div>
+    
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label id="dob-label" for="dob">D.O.B: </label>
+      </div>
+      <div class="rightTab">
+        <input type="date" name="dob" id="iddob" class="input-field" required>
+      </div>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="department">Department: </label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="department" class="dropdown">
+        <option disabled value>Select an option</option>
+        <option value="it">IT</option>
+        <option value="cse">CSE</option>
+        <option value="ece">ECE</option>
+        <option value="mech">MECH</option>
+        <option value="civil">CIVIL</option>
+        <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="gender">Gender: </label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label><input name="radio-buttons" value="male"  type="radio" class="userRatings" >Male</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="female"  type="radio" class="userRatings" >Female</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="others"  type="radio" class="userRatings" >Others</label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Address: </label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="address" placeholder="Enter your address here..."></textarea>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="pincode">Pincode: </label>
+      </div>
+      <div class="rightTab">
+       <input type="number" name="pincode" id="idpincode" class="input-field" style="height:20px;resize:vertical;" placeholder="- - - - - -"></div>
+    </div>
+    
+       <div class="rowTab">
+      
+        <input type="submit" id = "submit" value="Update" align="center" />
+        <input type="reset" id="reset"  value="Reset" align="center" />
+  </form>
+</div>
+
 </body>
 </html>

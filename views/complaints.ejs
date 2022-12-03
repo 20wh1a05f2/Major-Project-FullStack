@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <title>Complaints</title>
+    <title>COMPLAINTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -135,41 +135,47 @@
                 <h2>Complaints</h2>
             </div>
             <br>
-            <form action="/complaintsubmit1">
             <section class="online-complaint">
-
+                <form action="/complaintsubmit1">
                 <div class="online-box">
                     <h2>Hostel</h2>
                     <br>
-                    <textarea id="hostel" name="hostel" placeholder="Write Your complaint here" rows="4" cols="50" ></textarea><br>
-                    <input type="submit" class = "submit" value="Submit" align="center" />
-                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <textarea id="hostel" name="x" placeholder="Write Your complaint here" rows="4" cols="50" ></textarea><br>
+                    <input type="text" name = "type" value="hostel" hidden readonly>
+                    <input type="submit" class = "submit" value="Submit"  align="center" />
+                </div>
+                </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <form action="/complaintsubmit1">
                 <div class="online-box">
                     <h2>Transport</h2>
                     <br>
-                    <textarea id="transport" name="transport" placeholder="Write Your complaint here" rows="4" cols="50"></textarea><br>
+                    <textarea id="transport" name="x" placeholder="Write Your complaint here" rows="4" cols="50"></textarea><br>
+                    <input type="text" name = "type" value="transport" hidden readonly>
                     <input type="submit" class = "submit" value="Submit" align="center"/>
-                </div>
+                </div></form>
             </section><br><br>
 
                 <section class="online-complaint">
-
+                <form action="/complaintsubmit1">
                 <div class="online-box">
                     <h2>Classwork</h2>
                     <br>
-                    <textarea id="Classwork" name="Classwork" placeholder="Write Your complaint here"rows="4" cols="50"></textarea><br>
+                    <textarea id="Classwork" name="x" placeholder="Write Your complaint here"rows="4" cols="50"></textarea><br>
+                    <input type="text" name = "type" value="classwork" hidden readonly>
                     <input type="submit" class = "submit" value="Submit" align="center" />
-                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div></form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <form action="/complaintsubmit1">
                 <div class="online-box">
                     <h2>Management</h2>
                     <br>
-                    <textarea id="management" name="management" placeholder="Write Your complaint here"rows="4" cols="50"></textarea><br>
-                    <input type="submit" class = "submit" value="Submit" align="center" />
-                </div>
+                    <textarea id="management" name="x" placeholder="Write Your complaint here"rows="4" cols="50"></textarea><br>
+                    <input type="text" name = "type" value="management" hidden readonly>
+                    <input type="submit" class = "submit" value="Submit"  align="center" />
+                </div></form>
             </section>
             <br><br>
             
-        </form>
+        
 
         </div>
     </a>
