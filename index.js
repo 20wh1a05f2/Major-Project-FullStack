@@ -103,7 +103,6 @@ app.get('/feedbacksubmit1',(req, res)=>{
       docs.forEach((doc)=>{
         console.log("ok")
         db.collection("users").doc(doc.id).update({
-
           sem1:req.query.sem1 ,
           sem1lab : req.query.sem1Lab,
           sem2: req.query.sem2,
@@ -137,6 +136,8 @@ app.get('/biosubmit1',(req,res)=>{
         DOB : req.query.dob,
         Address : req.query.address,
         Pincode : req.query.pincode,
+        Gender : req.query.gender,
+        Department : req.query.department,
     });
     res.send("Data updated successfully");
   })

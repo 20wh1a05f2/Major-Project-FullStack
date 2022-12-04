@@ -86,23 +86,7 @@
       margin: 10px;
       border: 0px solid;
     }
-    .dropdown {
-      height: 35px;
-      width: 140px;
-      padding: 5px;
-      margin: 10px;  
-      margin-top: 15px;
-      border: 1px solid #c0c0c0;
-      border-radius: 2px;
-    }
     
-    .radio, .checkbox {
-      position: relative;
-      left: -43px;
-      margin-left: 10px;
-      display: block;
-      padding-bottom: 10px;
-    }
     
     @media screen and (max-width: 833px) {
       .input-field {
@@ -215,15 +199,7 @@
         <label for="department">Department: </label>
       </div>
       <div class="rightTab">
-        <select id="dropdown" name="department" class="dropdown">
-        <option disabled value>Select an option</option>
-        <option value="it">IT</option>
-        <option value="cse">CSE</option>
-        <option value="ece">ECE</option>
-        <option value="mech">MECH</option>
-        <option value="civil">CIVIL</option>
-        <option value="other">Other</option>
-        </select>
+        <input type="text" name="department" id="department" class="input-field" placeholder="CSE/IT/ECE/EEE" required>
       </div>
     </div>
     
@@ -232,11 +208,7 @@
         <label for="gender">Gender: </label>
       </div>
       <div class="rightTab">
-        <ul style="list-style: none;">
-          <li class="radio"><label><input name="radio-buttons" value="male"  type="radio" class="userRatings" >Male</label></li>
-          <li class="radio"><label><input name="radio-buttons" value="female"  type="radio" class="userRatings" >Female</label></li>
-          <li class="radio"><label><input name="radio-buttons" value="others"  type="radio" class="userRatings" >Others</label></li>
-        </ul>
+        <input type="text" name="gender" id="gender" class="input-field" placeholder="Male/Female/Other" required>
       </div>
     </div>
     <div class="rowTab">
