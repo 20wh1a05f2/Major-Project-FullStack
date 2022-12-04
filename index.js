@@ -26,7 +26,7 @@ app.get('/signup', (req, res) => {
 })
 app.get('/signin', (req, res) => {
   res.render('signin');
-}}
+})
 	
 app.get('/signupsubmit',(req, res)=>{
   const FullName = req.query.FullName;
@@ -142,7 +142,6 @@ app.get('/biosubmit1',(req,res)=>{
   })
 });
 });
-
 
 
 app.get('/coursesubmit', (req, res) => {
