@@ -78,6 +78,8 @@ p {
 .para-2 a {
   color: #49c1a2;
 }
+.error {color: #FF0000;}
+
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,19 +96,20 @@ p {
   </div>
     <h1 align="center" style="color: #344a72" class="a">BVRIT HYDERABAD College of Engineering For Women</h1>
     <div class="signup-box">
-      <h1>Register</h1>
-      <form action="/signupsubmit" method="get">
-        <label>Full Name</label>
+      <h1>Register</h1><br>
+      <form action="/signupsubmit" method="get" name="myform">
+        <label><span class = "error">* required field.</span></label><br>
+        <label>Full Name <span class = "error">*</span></label>
         <input type="text" name ="FullName"placeholder="" />
-        <label>Roll Number</label>
+        <label>Roll Number <span class = "error">*</span> </label>
         <input type="text" name="RollNumber" placeholder="" />
-        <label>Email</label>
-        <input type="email" name="Email" placeholder="" />
-        <label>Password</label>
+        <label>Email <span class = "error">*</span></label>
+        <input type="email" name="Email" placeholder=""/>
+        <label>Password <span class = "error">*</span></label>
         <input type="password" name="Password" placeholder="" />
         <label>Confirm Password</label>
         <input type="password" name="ConfirmPassword" placeholder="" />
-        <input type="submit" class="submit" value="Submit"/>
+        <input type="submit" class="submit" value="Submit" onClick="validate()"/>
       <closeform></closeform></form>
     </div>
     <p class="para-2">
