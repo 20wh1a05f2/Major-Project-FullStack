@@ -7,5 +7,20 @@
   },
   "scripts": {
     "start": "node index.js"
-  }
+  },
+  "name": "majorproject",
+  "description": "Building an Online Student portal using HTML, CSS, JS, Node JS, Express and Firebase. With the help of this system, students can access study material and get updated about the curriculum and can also raise complaints give their feedback and also access course material and references.\r Link to our project demo video:\r https://drive.google.com/file/d/1PmpjRjC5_WrcF3MGaDj2oGMR-Qf25jBP/view?usp=share_link",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20wh1a05f2/Major-Project-FullStack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/20wh1a05f2/Major-Project-FullStack/issues"
+  },
+  "homepage": "https://github.com/20wh1a05f2/Major-Project-FullStack#readme"
 }
