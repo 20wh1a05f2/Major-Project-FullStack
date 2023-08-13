@@ -13,7 +13,7 @@ initializeApp({
   credential: cert(serviceAccount)
 });
 const db = getFirestore();
-
+app.set('views', __dirname + "/views");
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
   res.render('main.ejs');
